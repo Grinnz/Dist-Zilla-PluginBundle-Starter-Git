@@ -28,7 +28,8 @@ skeleton for the main module and its documentation, and a basic F<.gitignore>.
 The author, license, and copyright will be populated in the C<dist.ini> and
 documentation from the current dzil C<config.ini>, which can be initialized
 using L<< C<dzil setup>|Dist::Zilla::App::Command::setup >>. The version is
-initialized statically as C<0.001>.
+initialized statically as C<0.001>. The directory is then initialized as a
+git repository using L<[Git::Init]|Dist::Zilla::Plugin::Git::Init>.
 
 =head1 CUSTOMIZING
 
@@ -53,7 +54,7 @@ option) in your dzil config (C<~/.dzil/config.ini>).
 
   ; or
   [%Mint]
-  provider = Starter
+  provider = Starter::Git
 
   $ dzil new My::New::Dist # now uses the specified provider and/or profile
 

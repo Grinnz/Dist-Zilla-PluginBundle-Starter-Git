@@ -112,7 +112,7 @@ Revision 3 is the default and is equivalent to using the following plugins:
 
 =item L<[UploadToCPAN]|Dist::Zilla::Plugin::UploadToCPAN>
 
-=item L<[Git::Commit / Release_Commit]|Dist::Zilla::Plugin::Git::Commit>
+=item L<[Git::Commit E<sol> Release_Commit]|Dist::Zilla::Plugin::Git::Commit>
 
   allow_dirty = dist.ini
   allow_dirty = Changes
