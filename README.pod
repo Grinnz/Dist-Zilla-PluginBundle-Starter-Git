@@ -22,6 +22,7 @@ Dist::Zilla::PluginBundle::Starter::Git - A minimal Dist::Zilla plugin bundle fo
   -remove = Pod2Readme ; to use [Readme::Brief] instead, for example
   ExecDir.dir = script ; change the directory used by [ExecDir]
   managed_versions = 1 ; uses the main module version, and bumps module versions after release
+  regenerate = LICENSE ; copy LICENSE to repository after release or dzil regenerate
 
 =head1 DESCRIPTION
 
