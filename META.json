@@ -72,11 +72,11 @@
    "provides" : {
       "Dist::Zilla::MintingProfile::Starter::Git" : {
          "file" : "lib/Dist/Zilla/MintingProfile/Starter/Git.pm",
-         "version" : "v3.0.0"
+         "version" : "v3.0.1"
       },
       "Dist::Zilla::PluginBundle::Starter::Git" : {
          "file" : "lib/Dist/Zilla/PluginBundle/Starter/Git.pm",
-         "version" : "v3.0.0"
+         "version" : "v3.0.1"
       }
    },
    "release_status" : "stable",
@@ -92,7 +92,7 @@
       },
       "x_IRC" : "irc://irc.perl.org/#distzilla"
    },
-   "version" : "v3.0.0",
+   "version" : "v3.0.1",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.028000"
@@ -357,7 +357,7 @@
                   "add_files_in" : [
                      "/"
                   ],
-                  "commit_msg" : "v%v%n%n%c"
+                  "commit_msg" : "%v%n%n%c"
                },
                "Dist::Zilla::Role::Git::DirtyFiles" : {
                   "allow_dirty" : [
@@ -389,7 +389,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "v3.0.0",
+                  "tag" : "v3.0.1",
                   "tag_format" : "%v",
                   "tag_message" : "%v"
                },

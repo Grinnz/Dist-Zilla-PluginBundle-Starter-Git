@@ -34,7 +34,7 @@ sub pluginset_release_management {
     ['Regenerate::AfterReleasers' => { plugin => $self->name . '/CopyFilesFromRelease' }],
     if @copy_files;
   push @plugins,
-    ['Git::Commit' => 'Release_Commit' => { allow_dirty => [@allow_dirty, @copy_files], add_files_in => '/' }],
+    ['Git::Commit' => 'Release_Commit' => { allow_dirty => [@allow_dirty, @copy_files], add_files_in => '/', commit_msg => '%v%n%n%c' }],
     ['Git::Tag' => { tag_format => '%v', tag_message => '%v' }];
   push @plugins, 'BumpVersionAfterRelease',
     ['Git::Commit' => 'Version_Bump_Commit' => { allow_dirty_match => '^', commit_msg => 'Bump version' }]
@@ -164,6 +164,7 @@ Revision 3 is the default and is equivalent to using the following plugins:
   allow_dirty = dist.ini
   allow_dirty = Changes
   add_files_in = /
+  commit_msg = %v%n%n%c
 
 =item L<[Git::Tag]|Dist::Zilla::Plugin::Git::Tag>
 

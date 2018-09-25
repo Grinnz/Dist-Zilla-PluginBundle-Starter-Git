@@ -118,6 +118,7 @@ Revision 3 is the default and is equivalent to using the following plugins:
   allow_dirty = dist.ini
   allow_dirty = Changes
   add_files_in = /
+  commit_msg = %v%n%n%c
 
 =item L<[Git::Tag]|Dist::Zilla::Plugin::Git::Tag>
 
