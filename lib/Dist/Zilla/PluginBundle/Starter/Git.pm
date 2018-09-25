@@ -23,7 +23,7 @@ my @allow_dirty = qw(dist.ini Changes);
 sub pluginset_release_management {
   my ($self) = @_;
   my $versions = $self->managed_versions;
-  my @copy_files = @{$self->copy_from_release};
+  my @copy_files = @{$self->regenerate};
   my @plugins;
   push @plugins, ['Git::Check' => {allow_dirty => [@allow_dirty]}];
   push @plugins, 'RewriteVersion',
@@ -35,7 +35,7 @@ sub pluginset_release_management {
     if @copy_files;
   push @plugins,
     ['Git::Commit' => 'Release_Commit' => { allow_dirty => [@allow_dirty, @copy_files], add_files_in => '/' }],
-    'Git::Tag';
+    ['Git::Tag' => { tag_format => '%v', tag_message => '%v' }];
   push @plugins, 'BumpVersionAfterRelease',
     ['Git::Commit' => 'Version_Bump_Commit' => { allow_dirty_match => '^', commit_msg => 'Bump version' }]
     if $versions;
@@ -104,10 +104,10 @@ additionally uses L<[Git::Commit]|Dist::Zilla::Plugin::Git::Commit> a second
 time after L<[BumpVersionAfterRelease]|Dist::Zilla::Plugin::BumpVersionAfterRelease>
 to commit the bumped versions (with the plugin name C<Version_Bump_Commit>).
 
-=head2 copy_from_release
+=head2 regenerate
 
-As in L<Dist::Zilla::PluginBundle::Starter/"copy_from_release">, and allows
-changes to the copied files to be committed in the C<Release_Commit>.
+As in L<Dist::Zilla::PluginBundle::Starter/"regenerate">, and allows changes to
+the copied files to be committed in the C<Release_Commit>.
 
 =head1 REVISIONS
 
@@ -165,6 +165,9 @@ Revision 3 is the default and is equivalent to using the following plugins:
   add_files_in = /
 
 =item L<[Git::Tag]|Dist::Zilla::Plugin::Git::Tag>
+
+  tag_format = %v
+  tag_message = %v
 
 =item L<[Git::Push]|Dist::Zilla::Plugin::Git::Push>
 

@@ -58,10 +58,10 @@ additionally uses L<[Git::Commit]|Dist::Zilla::Plugin::Git::Commit> a second
 time after L<[BumpVersionAfterRelease]|Dist::Zilla::Plugin::BumpVersionAfterRelease>
 to commit the bumped versions (with the plugin name C<Version_Bump_Commit>).
 
-=head2 copy_from_release
+=head2 regenerate
 
-As in L<Dist::Zilla::PluginBundle::Starter/"copy_from_release">, and allows
-changes to the copied files to be committed in the C<Release_Commit>.
+As in L<Dist::Zilla::PluginBundle::Starter/"regenerate">, and allows changes to
+the copied files to be committed in the C<Release_Commit>.
 
 =head1 REVISIONS
 
@@ -119,6 +119,9 @@ Revision 3 is the default and is equivalent to using the following plugins:
   add_files_in = /
 
 =item L<[Git::Tag]|Dist::Zilla::Plugin::Git::Tag>
+
+  tag_format = %v
+  tag_message = %v
 
 =item L<[Git::Push]|Dist::Zilla::Plugin::Git::Push>
 

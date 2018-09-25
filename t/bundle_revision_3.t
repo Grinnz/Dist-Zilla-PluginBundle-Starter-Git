@@ -13,7 +13,7 @@ my $tzil = Builder->from_config(
   {
     add_files => {
       path('source', 'dist.ini') => simple_ini({ version => undef },
-        ['@Starter::Git' => { managed_versions => 1, copy_from_release => 'LICENSE' }],
+        ['@Starter::Git' => { managed_versions => 1, regenerate => 'LICENSE' }],
         [Prereqs => { 'perl' => '5.006' }],
       ),
       path('source', 'lib', 'DZT', 'Sample.pm') => "package DZT::Sample;\nour \$VERSION = '0.001';\n1",
