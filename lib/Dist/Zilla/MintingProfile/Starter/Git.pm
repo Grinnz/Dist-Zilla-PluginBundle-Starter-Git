@@ -80,4 +80,5 @@ This is free software, licensed under:
 
 =head1 SEE ALSO
 
-L<Dist::Zilla>, L<Dist::Zilla::PluginBundle::Starter::Git>
+L<Dist::Zilla>, L<Dist::Zilla::PluginBundle::Starter::Git>,
+L<Dist::Zilla::MintingProfile::Starter>
