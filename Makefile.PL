@@ -19,10 +19,10 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => 0,
     "File::ShareDir::Install" => "0.06"
   },
-  "DISTNAME" => "Dist-Zilla-PluginBundle-Starter",
+  "DISTNAME" => "Dist-Zilla-PluginBundle-Starter-Git",
   "LICENSE" => "artistic_2",
   "MIN_PERL_VERSION" => "5.010001",
-  "NAME" => "Dist::Zilla::PluginBundle::Starter",
+  "NAME" => "Dist::Zilla::PluginBundle::Starter::Git",
   "PREREQ_PM" => {
     "Dist::Zilla" => 0,
     "Dist::Zilla::Plugin::Git::Check" => 0,
