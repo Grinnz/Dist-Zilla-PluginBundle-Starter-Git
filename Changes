@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Fix version number in commit message
 
 v3.0.0    2018-09-25 01:27:21 EDT
   - First release
