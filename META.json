@@ -1,5 +1,5 @@
 {
-   "abstract" : "A minimal Dist::Zilla plugin bundle with git support",
+   "abstract" : "A minimal Dist::Zilla plugin bundle for git workflows",
    "author" : [
       "Dan Book <dbook@cpan.org>"
    ],

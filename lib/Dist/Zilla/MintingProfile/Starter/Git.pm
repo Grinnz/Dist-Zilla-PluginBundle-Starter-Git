@@ -11,7 +11,7 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 NAME
 
-Dist::Zilla::MintingProfile::Starter::Git - A minimal Dist::Zilla minting profile
+Dist::Zilla::MintingProfile::Starter::Git - A minimal Dist::Zilla minting profile for git workflows
 
 =head1 SYNOPSIS
 
@@ -23,14 +23,12 @@ Dist::Zilla::MintingProfile::Starter::Git - A minimal Dist::Zilla minting profil
 
 This minting profile for L<< C<dzil new>|Dist::Zilla::App::Command::new >>
 creates a minimal new distribution consisting of a basic C<dist.ini> using the
-L<[@Starter::Git]|Dist::Zilla::PluginBundle::Starter::Git> plugin bundle, and a
-skeleton for the main module and its documentation. The author, license, and
-copyright will be populated in the C<dist.ini> and documentation from the
-current dzil C<config.ini>, which can be initialized using
-L<< C<dzil setup>|Dist::Zilla::App::Command::setup >>. The version is
-initialized statically as C<0.001>. See L<Dist::Zilla::PluginBundle::Starter/"Versions">
-for ways to automatically manage distribution versions between releases with
-L<Dist::Zilla>.
+L<[@Starter::Git]|Dist::Zilla::PluginBundle::Starter::Git> plugin bundle, a
+skeleton for the main module and its documentation, and a basic F<.gitignore>.
+The author, license, and copyright will be populated in the C<dist.ini> and
+documentation from the current dzil C<config.ini>, which can be initialized
+using L<< C<dzil setup>|Dist::Zilla::App::Command::setup >>. The version is
+initialized statically as C<0.001>.
 
 =head1 CUSTOMIZING
 

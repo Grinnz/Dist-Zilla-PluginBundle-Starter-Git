@@ -13,7 +13,7 @@ install_share module => "Dist::Zilla::MintingProfile::Starter::Git", "profiles";
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "A minimal Dist::Zilla plugin bundle with git support",
+  "ABSTRACT" => "A minimal Dist::Zilla plugin bundle for git workflows",
   "AUTHOR" => "Dan Book <dbook\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,

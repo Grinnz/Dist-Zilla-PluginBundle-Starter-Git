@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::Starter::Git - A minimal Dist::Zilla plugin bundle with git support
+Dist::Zilla::PluginBundle::Starter::Git - A minimal Dist::Zilla plugin bundle for git workflows
 
 =head1 SYNOPSIS
 
@@ -27,8 +27,8 @@ Dist::Zilla::PluginBundle::Starter::Git - A minimal Dist::Zilla plugin bundle wi
 
 The C<[@Starter::Git]> plugin bundle for L<Dist::Zilla> is a subclass of the
 L<[@Starter]|Dist::Zilla::PluginBundle::Starter> plugin bundle designed to
-support a Git-based workflow. See the documentation for C<[@Starter]> for any
-details not listed here.
+support a Git-based workflow. See the documentation for
+L<[@Starter]|Dist::Zilla::PluginBundle::Starter> for further details.
 
 For one-line initialization of a new C<[@Starter::Git]>-based distribution, try
 L<Dist::Zilla::MintingProfile::Starter::Git>.
@@ -60,8 +60,8 @@ to commit the bumped versions (with the plugin name C<Version_Bump_Commit>).
 
 =head2 copy_from_release
 
-As in L<Dist::Zilla::PluginBundle::Starter/"copy_from_release">, and allows the
-copied files to have uncommitted changes during the C<Release_Commit>.
+As in L<Dist::Zilla::PluginBundle::Starter/"copy_from_release">, and allows
+changes to the copied files to be committed in the C<Release_Commit>.
 
 =head1 REVISIONS
 
@@ -143,8 +143,8 @@ Revision 3 is the default and is equivalent to using the following plugins:
 
 =back
 
-This revision differs from L<[@Basic]|Dist::Zilla::PluginBundle::Basic> as
-follows:
+This revision differs from L<Revision 3 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 3">
+as follows:
 
 =over 2
 
@@ -155,28 +155,11 @@ instead of L<[GatherDir]|Dist::Zilla::Plugin::GatherDir>.
 
 =item *
 
-Uses L<[ReadmeAnyFromPod]|Dist::Zilla::Plugin::ReadmeAnyFromPod>
-instead of L<[Readme]|Dist::Zilla::Plugin::Readme>.
-
-=item *
-
-Uses L<[RunExtraTests]|Dist::Zilla::Plugin::RunExtraTests> instead of
-L<[ExtraTests]|Dist::Zilla::Plugin::ExtraTests>.
-
-=item *
-
 Includes the following additional plugins:
-L<[MetaJSON]|Dist::Zilla::Plugin::MetaJSON>,
-L<[PodSyntaxTests]|Dist::Zilla::Plugin::PodSyntaxTests>,
-L<[Test::ReportPrereqs]|Dist::Zilla::Plugin::Test::ReportPrereqs>,
-L<[Test::Compile]|Dist::Zilla::Plugin::Test::Compile>,
 L<[Git::Check]|Dist::Zilla::Plugin::Git::Check>,
 L<[Git::Commit]|Dist::Zilla::Plugin::Git::Commit>,
 L<[Git::Tag]|Dist::Zilla::Plugin::Git::Tag>,
-L<[Git::Push]|Dist::Zilla::Plugin::Git::Push>,
-L<[MetaConfig]|Dist::Zilla::Plugin::MetaConfig>,
-L<[MetaNoIndex]|Dist::Zilla::Plugin::MetaNoIndex>,
-L<[MetaProvides::Package]|Dist::Zilla::Plugin::MetaProvides::Package>.
+L<[Git::Push]|Dist::Zilla::Plugin::Git::Push>.
 
 =back
 
