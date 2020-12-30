@@ -74,8 +74,11 @@ Dist::Zilla::PluginBundle::Starter::Git - A minimal Dist::Zilla plugin bundle fo
 
 The C<[@Starter::Git]> plugin bundle for L<Dist::Zilla> is a subclass of the
 L<[@Starter]|Dist::Zilla::PluginBundle::Starter> plugin bundle designed to
-support a Git-based workflow. See the documentation for
-L<[@Starter]|Dist::Zilla::PluginBundle::Starter> for further details.
+support a Git-based workflow.
+
+See the L<Dist::Zilla::Starter> guide and the base
+L<[@Starter]|Dist::Zilla::PluginBundle::Starter> documentation, as this
+documentation only details the specifics of this subclass.
 
 For one-line initialization of a new C<[@Starter::Git]>-based distribution, try
 L<Dist::Zilla::MintingProfile::Starter::Git>.
@@ -89,7 +92,7 @@ configured by the composed roles, as in L</"CONFIGURING">.
 =head2 revision
 
   [@Starter::Git]
-  revision = 3
+  revision = 5
 
 As in L<Dist::Zilla::PluginBundle::Starter/"revision">, but defaults to
 revision 3. C<[@Starter::Git]> requires at least revision 3.
