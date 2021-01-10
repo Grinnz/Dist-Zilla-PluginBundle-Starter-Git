@@ -4,7 +4,7 @@ use Moose;
 extends 'Dist::Zilla::PluginBundle::Starter';
 use namespace::clean;
 
-our $VERSION = 'v5.0.1';
+our $VERSION = 'v5.0.2';
 
 has '+revision' => (
   default => sub { $_[0]->payload->{revision} // 3 },
