@@ -46,7 +46,8 @@ L<Dist::Zilla::MintingProfile::Starter::Git>.
 
 C<[@Starter::Git]> inherits the options from
 L<[@Starter]|Dist::Zilla::PluginBundle::Starter>, and can similarly be further
-configured by the composed roles, as in L</"CONFIGURING">.
+configured by the composed roles, as in
+L<Dist::Zilla::PluginBundle::Starter/"CONFIGURING">.
 
 =head2 revision
 
