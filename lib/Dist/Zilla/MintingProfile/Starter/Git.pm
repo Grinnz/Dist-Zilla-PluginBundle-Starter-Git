@@ -31,6 +31,9 @@ using L<< C<dzil setup>|Dist::Zilla::App::Command::setup >>. The version is
 initialized statically as C<0.001>. The directory is then initialized as a
 git repository using L<[Git::Init]|Dist::Zilla::Plugin::Git::Init>.
 
+The L<Dist::Zilla::Starter> guide explains how the L<Dist::Zilla> plugin system
+works, and how it is specifically used for the minting process.
+
 =head1 CUSTOMIZING
 
 It's easy to create your own local version of this (or any other) minting
