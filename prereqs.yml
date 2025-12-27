@@ -13,6 +13,7 @@ runtime:
     namespace::clean: 0
 test:
   requires:
+    Git::Wrapper: 0
     Path::Tiny: '0.079' # relative method algorithm
     Test::DZil: 0
     Test::More: '0.88' # done_testing
