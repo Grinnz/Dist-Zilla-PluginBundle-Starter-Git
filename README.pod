@@ -52,7 +52,7 @@ L<Dist::Zilla::PluginBundle::Starter/"CONFIGURING">.
 =head2 revision
 
   [@Starter::Git]
-  revision = 5
+  revision = 6
 
 As in L<Dist::Zilla::PluginBundle::Starter/"revision">, but defaults to
 revision 3. C<[@Starter::Git]> requires at least revision 3.
