@@ -77,9 +77,10 @@ the copied files to be committed in the C<Release_Commit>.
 
 The C<[@Starter::Git]> plugin bundle supports the following revisions.
 
-=head2 Revision 3
+=head2 Revision 6
 
-Revision 3 is the default and is equivalent to using the following plugins:
+Revision 6 is the current set of best practices, equivalent to using the
+following plugins if not configured further:
 
 =over 2
 
@@ -107,6 +108,10 @@ Revision 3 is the default and is equivalent to using the following plugins:
 
 =item L<[PruneCruft]|Dist::Zilla::Plugin::PruneCruft>
 
+=item L<[PruneFiles]|Dist::Zilla::Plugin::PruneFiles>
+
+  filename = README.pod
+
 =item L<[ManifestSkip]|Dist::Zilla::Plugin::ManifestSkip>
 
 =item L<[RunExtraTests]|Dist::Zilla::Plugin::RunExtraTests>
@@ -115,12 +120,6 @@ Revision 3 is the default and is equivalent to using the following plugins:
 
   allow_dirty = dist.ini
   allow_dirty = Changes
-
-=item L<[TestRelease]|Dist::Zilla::Plugin::TestRelease>
-
-=item L<[ConfirmRelease]|Dist::Zilla::Plugin::ConfirmRelease>
-
-=item L<[UploadToCPAN]|Dist::Zilla::Plugin::UploadToCPAN>
 
 =item L<[Git::Commit E<sol> Release_Commit]|Dist::Zilla::Plugin::Git::Commit>
 
@@ -136,7 +135,15 @@ Revision 3 is the default and is equivalent to using the following plugins:
 
 =item L<[Git::Push]|Dist::Zilla::Plugin::Git::Push>
 
-=item L<[MetaConfig]|Dist::Zilla::Plugin::MetaConfig>
+=item L<[TestRelease]|Dist::Zilla::Plugin::TestRelease>
+
+=item L<[ConfirmRelease]|Dist::Zilla::Plugin::ConfirmRelease>
+
+=item L<[UploadToCPAN]|Dist::Zilla::Plugin::UploadToCPAN>
+
+=item L<[MetaMergeFile]|Dist::Zilla::Plugin::MetaMergeFile>
+
+=item L<[PrereqsFile]|Dist::Zilla::Plugin::PrereqsFile>
 
 =item L<[MetaNoIndex]|Dist::Zilla::Plugin::MetaNoIndex>
 
@@ -157,8 +164,24 @@ Revision 3 is the default and is equivalent to using the following plugins:
 
 =back
 
-This revision differs from L<Revision 3 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 3">
-as follows:
+Revision 6 has no specific differences from Revision 5 beyond the changes in
+L<Revision 6 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 6">.
+
+=head2 Revision 5
+
+Revision 5 has no specific differences from Revision 4 beyond the changes in
+L<Revision 5 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 5">.
+
+=head2 Revision 4
+
+Revision 4 has no specific differences from Revision 3 beyond the changes in
+L<Revision 4 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 4">.
+
+=head2 Revision 3
+
+Revision 3 is the default if no revision is specified, and differs from
+L<Revision 3 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 3"> as
+follows:
 
 =over 2
 
@@ -176,21 +199,6 @@ L<[Git::Tag]|Dist::Zilla::Plugin::Git::Tag>,
 L<[Git::Push]|Dist::Zilla::Plugin::Git::Push>.
 
 =back
-
-=head2 Revision 4
-
-Revision 4 has no specific differences beyond the changes in
-L<Revision 4 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 4">.
-
-=head2 Revision 5
-
-Revision 5 has no specific differences beyond the changes in
-L<Revision 5 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 5">.
-
-=head2 Revision 6
-
-Revision 6 has no specific differences beyond the changes in
-L<Revision 6 in [@Starter]|Dist::Zilla::PluginBundle::Starter/"Revision 6">.
 
 =head1 BUGS
 
